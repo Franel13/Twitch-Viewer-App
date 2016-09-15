@@ -1,0 +1,91 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+  background-color: #2F3C4F;
+  text-align: center;
+}
+
+main {
+  min-height: 400px;
+}
+
+h1 {
+  font-weight: bold;
+  color: pink;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 100px;
+}
+
+li {
+  display: flex;
+  justify-content: left; /* align horizontal */
+  align-items: center; 
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  width: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+.nicejob {
+  text-decoration: line-through;
+}
