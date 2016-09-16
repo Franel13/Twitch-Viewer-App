@@ -20,7 +20,7 @@ main {
 
 h1 {
   font-weight: bold;
-  color: pink;
+  color: #DE703B;
 }
 
 img {
@@ -30,14 +30,25 @@ img {
 
 ul {
   list-style: none;
-  margin-left: 100px;
+  margin-left: 300px;
 }
 
 li {
   display: flex;
-  justify-content: left; /* align horizontal */
   align-items: center; 
   text-align: left;
+  background-color: #506E86;
+  width: 870px;
+  border: 1px solid #DE703B;
+  border-radius: 5px;
+  box-shadow: 1px 2px #C25019;
+  color: #FCB040;
+  padding: 5px;
+  margin: 7px;
+}
+
+li:hover {
+  box-shadow: 2px 3px #EB5F1C;
 }
 
 a {
@@ -45,6 +56,7 @@ a {
   width: 150px;
   padding-left: 20px;
   padding-right: 20px;
+  color: #E3931E;
 }
 
 a:hover {
@@ -58,18 +70,15 @@ a:hover {
 button {
   font-size: 16px;
   border-radius: 3px;
-  background-color: lightgrey;
-  border: 1px solid grey;
-  box-shadow: 2px 2px teal;
+  background-color: #2F3C4F;
+  color: #FCB040;
+  border: 1px solid #DE703B;
+  box-shadow: 2px 2px #506E86;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: yellow;
-}
-
-button:active {
-  box-shadow: none;
+  background-color: #DE703B;
 }
 
 li {
@@ -80,10 +89,13 @@ footer {
   margin-top: 50px;
   padding-top: 25px;
   border-top: 1px solid lightgrey;
+  
 }
 
 footer > a {
   color: #BBBBBB;
+  float: right;
+  width: 300px;
 }
 
 .nicejob {
