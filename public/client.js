@@ -11,15 +11,34 @@ $(function() {
     streamData: [],
     getStreamData: function() {
       this.streamsList.forEach(function(stream, index) {
-        $.getJSON('https://api.twitch.tv/kraken/streams/' + stream, function(json) {
-          console.log(json);
-          json.stream ? streams.streamData.push({'streamName': json.stream.channel.display_name, 'streamGame': json.stream.channel.game, 'streamStatus': json.stream.channel.status, 'streamLogo': json.stream.channel.logo, 'streamUrl': json.stream.channel.url}) : 
-                        streams.streamData.push({'streamName': streams.streamsList[index], 'streamStatus': 'Offline', 'streamUrl': 'https://www.twitch.tv/' + streams.streamsList[index], 'streamLogo': 'https://web-cdn.ttvnw.net/images/xarth/dead_glitch.png'});
+        $.ajax({
+          type: 'GET',
+          url: 'https://api.twitch.tv/kraken/streams/' + stream,
+          headers: {
+            'Client-ID': 'qxakknksxswh3c64evbw4zoc0kiuomk'
+          },
+          success: function(json) {
+            json.stream ? streams.streamData.push({'streamName': json.stream.channel.display_name, 'streamGame': json.stream.channel.game, 'streamStatus': json.stream.channel.status, 'streamLogo': json.stream.channel.logo, 'streamUrl': json.stream.channel.url}) : 
+                        $.ajax({
+                          type: 'GET',
+                          url: 'https://api.twitch.tv/kraken/channels/' + stream,
+                          headers: {
+                            'Client-ID': 'qxakknksxswh3c64evbw4zoc0kiuomk'
+                          },
+                          success: function(json2) {
+                            streams.streamData.push({'streamName': json2.display_name, 'streamStatus': 'Offline', 'streamLogo': json2.logo, 'streamUrl': json2.url});
+                          }
+                        });
+                        
+          }
         }).fail(function() {
           streams.streamData.push({'streamName': streams.streamsList[index], 'streamStatus': 'Account Closed', 'streamUrl': 'https://www.twitch.tv/' + streams.streamsList[index], 'streamLogo': 'https://web-cdn.ttvnw.net/images/xarth/dead_glitch.png'});
+        // }).done(function(){
+        //   view.displayStreams();
         });
       }, this);
     }
+    
   };
   
   var view = {
@@ -50,5 +69,4 @@ $(function() {
   });
   
   streams.getStreamData();
-
 });
