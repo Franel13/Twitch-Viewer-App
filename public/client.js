@@ -53,7 +53,7 @@ $(function() {
         var status = '<span> - ' + item.streamStatus + '</span>';
         html = image + link;
         if (item.streamGame !== undefined) {
-          var game = '<span> - ' + item.streamGame + '</span>';
+          var game = '<span> - ' + item.streamGame + '&nbsp;</span>';
           html += game;
         }
         html += status;
