@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   margin: 25px;
   background-color: #2F3C4F;
   text-align: center;
@@ -19,6 +19,7 @@ main {
 }
 
 h1 {
+  font-size: 3rem;
   font-weight: bold;
   color: #DE703B;
 }
@@ -30,7 +31,8 @@ img {
 
 ul {
   list-style: none;
-  margin-left: 300px;
+  width: 870px;
+  margin: 30px auto;
 }
 
 li {
@@ -38,7 +40,6 @@ li {
   align-items: center; 
   text-align: left;
   background-color: #506E86;
-  width: 870px;
   border: 1px solid #DE703B;
   border-radius: 5px;
   box-shadow: 1px 2px #C25019;
@@ -63,11 +64,8 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
-
-
 button {
+  font-family: 'Archivo Narrow', sans-serif;
   font-size: 16px;
   border-radius: 3px;
   background-color: #2F3C4F;
@@ -89,7 +87,7 @@ footer {
   margin-top: 50px;
   padding-top: 25px;
   border-top: 1px solid lightgrey;
-  
+  height: 50px;
 }
 
 footer > a {
@@ -98,6 +96,3 @@ footer > a {
   width: 300px;
 }
 
-.nicejob {
-  text-decoration: line-through;
-}
