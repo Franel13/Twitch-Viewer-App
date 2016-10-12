@@ -1,6 +1,6 @@
-Twitch Viewer
+<h1>Twitch Viewer</h1>
 
-https://sky-bunny.hyperdev.space - Live Preview
+<h2>https://sky-bunny.hyperdev.space - Live Preview</h2>
 
-Make sure to allow content coming from other sources.
+<h3>Make sure to allow content coming from other sources.</h3>
 
